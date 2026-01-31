@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}{% if title %} | Mantis Digital Media{% endif %}</title>
+    <meta name="description" content="{{ description | default('Clean, creative websites for small businesses in Connecticut.') }}">
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- 
+        Favicon:
+        This project uses a placeholder icon (favicon-placeholder.png).
+        Replace it with your own PNG or ICO when cloning this template.
+    -->
+    <link rel="icon" type="image/png" href="/favicon-placeholder.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+    {% include "partials/header.njk" %}
+
+
+    
+
+
+    <section class="top-section">
+        {{ content | safe }}
+    </section>
+
+
+
+    {% include "partials/footer.njk" %}

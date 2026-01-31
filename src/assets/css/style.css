@@ -1,0 +1,403 @@
+/* ------------------------------
+   Simple CSS Reset
+--------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.logo-text {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+/* Remove default list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default link underline */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images responsive by default */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Keep buttons consistent */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Reset headings: remove browser default margins */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+/* -----------------------------
+   Color Styles
+-------------------------------*/
+:root {
+  /* Core Backgrounds */
+  --color-bg-main: #060009;
+  --color-bg-surface: #43026f;
+
+  /* Brand Gradient */
+  --color-gradient-start: #43026f;
+  --color-gradient-end: #060009;
+
+  /* Text */
+  --color-text-main: #d5bff9;
+  --color-text-muted: #bfa4ff;
+
+  /* Accent */
+  --color-accent: #99cc33;
+  --color-accent-soft: rgba(124,255,0,0.25);
+
+  /* Header / Footer */
+  --color-header-bg: #060009;
+  --color-footer-bg: #060009;
+
+  /* Lines / UI */
+  --color-border: rgba(113, 28, 135, 0.555);
+}
+
+/* -----------------------------
+    Main
+-------------------------------*/
+body {
+  background: radial-gradient(circle at center, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
+    color: var(--color-text-main); /* a soft lavender white that compliments purple */
+    font-family: 'Inter', sans-serif;
+}
+
+/* -----------------------------
+   Header Styles
+------------------------------*/
+
+.site-header {
+    background: transparent;
+    color: var(--color-text-muted);
+    border-bottom: none;
+}
+
+.header-container {
+  /*max-width: 1200px;*/
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* LOGO */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #99cc33; /* accent */
+}
+.logo img {
+  display: block;
+  height: 52px;   /* or 60–80px if you want it bigger */
+  width: auto;
+}
+
+
+/* NAVIGATION (base) */
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.main-nav a {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: color 0.25s ease;
+}
+
+.main-nav a:hover {
+  color: var(--color-accent);
+}
+
+/* PHONE */
+.header-phone a {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.header-phone a:hover {
+  color: #8cff8c;
+}
+
+/* HAMBURGER BUTTON (base styles) */
+.nav-toggle {
+  width: 42px;
+  height: 30px;
+  padding: 0;
+  border-radius: 4px;
+  
+  background: transparent;
+
+  display: none;          /* hidden on desktop; shown in mobile query */
+  position: relative;     /* lines are positioned inside this box */
+}
+
+/* Three lines stacked with absolute positioning */
+.nav-toggle__line {
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  height: 2px;
+  background: var(--color-text-muted);
+  border-radius: 999px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Top, middle, bottom bars */
+.nav-toggle__line:nth-child(1) {
+  top: 5px;
+}
+
+.nav-toggle__line:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-toggle__line:nth-child(3) {
+  bottom: 5px;
+}
+
+/* When nav is open, turn into a perfect X */
+.site-header.nav-open .nav-toggle__line:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.site-header.nav-open .nav-toggle__line:nth-child(2) {
+  opacity: 0;
+}
+
+.site-header.nav-open .nav-toggle__line:nth-child(3) {
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* Sticky mobile call button */
+.mobile-call-button {
+  display: none;                 /* hidden on desktop */
+}
+
+/* -----------------------------
+   Desktop layout
+------------------------------*/
+
+@media (min-width: 769px) {
+  .header-container {
+    flex-wrap: nowrap;
+  }
+
+  .main-nav {
+    order: 2;
+  }
+
+  .header-phone {
+    order: 3;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+
+/* -----------------------------
+   Mobile layout
+------------------------------*/
+
+@media (max-width: 768px) {
+  
+  .header-container {
+    flex-wrap: no-wrap;
+    align-items: center;
+    /* keeps row 2 elements (phone + burger) spread apart */
+    justify-content: space-between;
+  }
+
+  /* Row 1: logo centered, full width */
+  .logo {
+    order: 1;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+
+  /* Row 2 left: phone */
+  .header-phone {
+    order: 2;
+    display: none;
+  }
+
+  /* Row 2 right: hamburger */
+  .nav-toggle {
+    order: 3;
+    display: flex;       /* show the button on mobile */
+    margin-left: auto;   /* push it to the right edge */
+  }
+
+  /* Row 3: nav dropdown, full width, hidden by default */
+  .main-nav {
+    /*order: 4;*/
+    width: 100%;
+    display: none;
+    border-top: 1px solid #222;
+    margin-top: 8px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0 10px;
+    
+  }
+
+  .site-header.nav-open .main-nav {
+    display: block;
+    position: absolute;
+    z-index: -10;
+    left: 0;
+    top: 70px;
+    width: 100vw;
+    padding-left: 5vw;
+    height: 300px;
+    
+  }
+  .mobile-call-button {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    background: var(--color-accent);
+    color: var(--color-bg-main);
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 1.1rem;
+
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.25);
+    border-top: 1px solid #4bbf4b;
+
+    z-index: 9999;
+  }
+  .mobile-call-button:hover {
+    background: #7cff7c;
+  }
+}
+
+
+/*-----------------------------
+    Top Section
+------------------------------*/
+
+.top-section {
+    min-height: 600px;
+}
+
+
+
+
+
+
+
+/* Footer styles */
+.site-footer {
+    background: transparent;
+    color: var(--color-text-muted); /* slightly dimmer than body text */
+    text-align: left;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  /*max-width: 1100px;*/
+  margin: 0 auto;
+}
+
+.footer-container h3,
+.footer-container h4 {
+  margin-bottom: 10px;
+  color: var(--color-accent);
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-nav ul li {
+  margin-bottom: 6px;
+}
+
+.footer-nav a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: var(--color-text-main);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  margin-top: 30px;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+}
