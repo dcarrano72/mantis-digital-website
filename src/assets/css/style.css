@@ -330,15 +330,41 @@ body {
 
 
 /*-----------------------------
-    Top Section
+    Main
 ------------------------------*/
 
-.top-section {
+.main {
     min-height: 600px;
 }
 
+.hero {
+    min-height: 400px;
+    width: 100vw;
+    background-color: var(--color-bg-surface);
+}
 
+.section-one-column {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
+    h1 {
+      font-family: 'Anton', sans-serif;
+      color: var(--color-text-muted);
+    }
+}
+
+.section-two-column {
+
+}
+
+.section-three-column {
+
+}
+
+.section-four-column {
+
+}
 
 
 
