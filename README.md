@@ -1,4 +1,4 @@
-# Mantis Starter Template  
+# Mantis Digital Website  
 **Eleventy + Nunjucks + Netlify JAMstack Website Template**
 
 A lightweight, fast, SEO-friendly starter template for building modern, mobile-optimized websites using **Eleventy (11ty)**, **Nunjucks**, and **Netlify**. Designed for rapid development, clean structure, and easy reuse across multiple projects.
