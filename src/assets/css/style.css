@@ -224,6 +224,38 @@ body {
    Desktop layout
 ------------------------------*/
 
+/*------------------------------
+   Contact Form 
+-------------------------------*/
+.main-contact-form-container {
+    width: 60%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 8%;
+    background-color: var(--color-bg-main);
+    border-radius: 10px;
+    margin: 50px auto;
+    text-align: right;
+}
+.main-contact-form input, select, textarea {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--color-text-main);
+    color: var(--color-bg-main);
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.main-contact-form label {
+    color: var(--color-text-muted);
+}
+
+
+
+
+
+
 @media (min-width: 769px) {
   .header-container {
     flex-wrap: nowrap;

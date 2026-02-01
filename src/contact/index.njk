@@ -1,9 +1,99 @@
 ---
 layout: layouts/base.njk
-title: About
-description: Learn about Mantis Digital Media in Shelton, CT.
+title: Contact Mantis Digital Media | Web Design & SEO in Connecticut
+description: Contact Mantis Digital Media for web design, SEO, and website updates in Connecticut. Get a fast quote, ask a question, or request a One-Day Website. Call or text 203-402-9550.
 ---
 <section class="section-one-column">
-    <h1>Contact</h1>
+    <h1>Contact Mantis Digital Media</h1>
+    
+    <p>Want a website that looks professional, loads fast, and helps people find your business?
+Send a message and tell me what you need. Whether it’s a new site, a redesign, or quick improvements, I’ll reply with clear next steps and a straightforward quote.</p>
+    
+    <p>Fastest way to reach me: Call or text 203-402-9550</p>
+<div class="main-contact-form-container">
+    <form class="main-contact-form" 
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  action="/contact/success/"
+>
+  <!-- Required hidden input for Netlify -->
+  <input type="hidden" name="form-name" value="contact" />
+
+  <!-- Honeypot (hidden from humans) -->
+  <p style="display:none;">
+    <label>
+      Don’t fill this out if you’re human: <input name="bot-field" />
+    </label>
+  </p>
+
+  <div>
+    <label for="fullName">Full Name *</label>
+    <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+  </div>
+
+  <div>
+    <label for="businessName">Business Name</label>
+    <input id="businessName" name="businessName" type="text" autocomplete="organization" />
+  </div>
+
+  <div>
+    <label for="serviceArea">Town / Service Area</label>
+    <input id="serviceArea" name="serviceArea" type="text" placeholder="Example: Shelton, CT" />
+  </div>
+
+  <div>
+    <label for="email">Email Address *</label>
+    <input id="email" name="email" type="email" autocomplete="email" required />
+  </div>
+
+  <div>
+    <label for="phone">Phone Number</label>
+    <input id="phone" name="phone" type="tel" autocomplete="tel" />
+  </div>
+
+  <div>
+    <label for="website">Website URL</label>
+    <input id="website" name="website" type="url" placeholder="https://example.com" />
+  </div>
+
+  <div>
+    <label for="help">What can I help you with? *</label>
+    <select id="help" name="help" required>
+      <option value="" selected disabled>Select one</option>
+      <option>New Website</option>
+      <option>Website Redesign</option>
+      <option>Website Updates / Fixes</option>
+      <option>SEO / Get Found on Google</option>
+      <option>Speed / Mobile Improvements</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="contactMethod">Preferred Contact Method</label>
+    <select id="contactMethod" name="contactMethod">
+      <option>Text</option>
+      <option>Phone</option>
+      <option>Email</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="message">Your Message *</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="7"
+      required
+      placeholder="Tell me what you do, what you want the website to accomplish, and any links you want me to see."
+    ></textarea>
+  </div>
+
+  <button type="submit">Send Message</button>
+</form>
+</div>
+
 </section>
 
