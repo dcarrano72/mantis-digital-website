@@ -53,6 +53,11 @@ button {
 h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
   line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+p {
+  margin-bottom: 20px;
 }
 
 /* -----------------------------
@@ -228,7 +233,7 @@ body {
    Contact Form 
 -------------------------------*/
 .main-contact-form-container {
-    width: 60%;
+    width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 50px;
@@ -241,7 +246,7 @@ body {
 .main-contact-form input, select, textarea {
     padding: 15px;
     border-radius: 5px;
-    background-color: var(--color-text-main);
+    background-color: var(--color-text-muted);
     color: var(--color-bg-main);
     width: 60%;
     margin-bottom: 20px;
@@ -386,6 +391,12 @@ body {
     h1 {
       font-family: 'Anton', sans-serif;
       color: var(--color-text-muted);
+    }
+
+    .section-inner-container {
+      width: 80%;
+      margin: 0 auto;
+
     }
 }
 
