@@ -261,15 +261,7 @@ body {
   color: var(--color-gradient-start);
 }
 
-.field-row {
-  display: flex;
-  align-items: flex-start; /* top-aligns label with textarea */
-  gap: 0.75rem;
-}
 
-.field-row label {
-  min-width: 140px; /* optional, keeps all labels aligned in a column */
-}
 
 
 
