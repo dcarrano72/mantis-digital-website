@@ -75,6 +75,8 @@ select {
 
 
 
+
+
 /* -----------------------------
    Color Styles
 -------------------------------*/
@@ -95,6 +97,11 @@ select {
   --color-accent: #99cc33;
   --color-accent-soft: rgba(124,255,0,0.25);
 
+  /* Forms */
+  --field-bg: #43026f;
+  --field-bg-active: #6e12ac;
+  --field-text: #060009;
+
   /* Header / Footer */
   --color-header-bg: #060009;
   --color-footer-bg: #060009;
@@ -102,6 +109,45 @@ select {
   /* Lines / UI */
   --color-border: rgba(113, 28, 135, 0.555);
 }
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: var(--field-text);
+  -webkit-box-shadow: 0 0 0px 1000px var(--field-bg-active) inset;
+  box-shadow: 0 0 0px 1000px var(--field-bg-active) inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Modern browsers */
+input::placeholder,
+textarea::placeholder {
+  color: #AFA8D3; /* your muted lavender */
+  opacity: 1;     /* Firefox needs this to avoid fading */
+}
+
+/* Chrome / Safari / Edge (older WebKit) */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #AFA8D3;
+}
+
+/* Firefox (older) */
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #AFA8D3;
+}
+
+/* IE / legacy Edge */
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #AFA8D3;
+}
+
+
 
 /* -----------------------------
     Main
@@ -295,7 +341,19 @@ body {
 
 }
 
+/* contact form mobile styles */
+@media (min-width: 768px) {
+    .main-contact-form div {
+    margin-left: 2%;
+    margin-right: 2%;
+    border: solid 1px blue;
+    
+}
+    .main-contact-form {
+      border: solid 1px blue;
+    }
 
+}
 
 
 
@@ -407,6 +465,18 @@ body {
   .mobile-call-button:hover {
     background: #7cff7c;
   }
+
+  .main-contact-form div {
+    margin-left: 2%;
+    margin-right: 2%;
+    
+    
+}
+    .main-contact-form-container {
+      padding-top: 20px;
+    }
+
+   
 }
 
 
