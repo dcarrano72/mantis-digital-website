@@ -60,6 +60,21 @@ p {
   margin-bottom: 20px;
 }
 
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+  appearance: none;
+
+  border: 0;                 /* kills the inset border */
+  box-shadow: none;          /* kills inner bevel shadow */
+  -webkit-box-shadow: none;  /* extra */
+  background-image: none;    /* helps on some types */
+  outline: none;
+}
+
+
+
 /* -----------------------------
    Color Styles
 -------------------------------*/
@@ -234,22 +249,35 @@ body {
 -------------------------------*/
 .main-contact-form-container {
     width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 50px;
-    padding-right: 8%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
     background-color: var(--color-bg-main);
     border-radius: 10px;
     margin: 50px auto;
-    text-align: right;
+    text-align: left;
+    
+}
+.main-contact-form {
+  background-color: var(--color-bg-main);
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .main-contact-form input, select, textarea {
     padding: 15px;
     border-radius: 5px;
-    background-color: var(--color-text-muted);
+    background-color: var(--color-bg-surface);
     color: var(--color-bg-main);
-    width: 60%;
+    width: 100%;
     margin-bottom: 20px;
+    
+
+}
+
+.main-contact-form div {
+    margin-left: 20%;
+    margin-right: 20%;
+    
 }
 
 .main-contact-form label {
@@ -259,6 +287,12 @@ body {
 .contact-form-button {
   background-color: var(--color-accent);
   color: var(--color-gradient-start);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+
 }
 
 
