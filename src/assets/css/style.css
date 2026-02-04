@@ -282,6 +282,7 @@ body {
 .header-phone a {
   color: var(--color-accent);
   font-weight: 600;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
   white-space: nowrap;
   transition: color 0.25s ease;
@@ -396,12 +397,13 @@ body {
 
 .contact-form-button {
   background-color: var(--color-accent);
-  color: var(--color-gradient-start);
+  color: var(--color-bg-main);
+  font-weight: 600;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  border-radius: 10px;
+  border-radius: 5px;
 
 }
 
@@ -466,6 +468,7 @@ body {
   .header-phone {
     order: 2;
     display: none;
+    font-family: 'Anton', sans-serif;
   }
 
   /* Row 2 right: hamburger */
@@ -578,7 +581,7 @@ section p {
       font-size: 3.5rem; 
     }
     .section-inner-container {
-      width: 80%;
+      width: 60%;
       margin: 0 auto;
 
     }
