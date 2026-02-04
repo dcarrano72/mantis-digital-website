@@ -155,12 +155,71 @@ a:hover {
 }
 
 /* -----------------------------
+    Fonts
+-------------------------------*/
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+/* -----------------------------
     Main
 -------------------------------*/
 body {
-  background: radial-gradient(circle at center, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
+    background: radial-gradient(circle at center, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
     color: var(--color-text-main); /* a soft lavender white that compliments purple */
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 /* -----------------------------
@@ -488,6 +547,14 @@ body {
 /*-----------------------------
     Main
 ------------------------------*/
+section p {
+  line-height: 1.8em;
+}
+.nav-link.active,
+.nav-link:hover{
+  color: var(--color-accent); /* or your brand green */
+  text-decoration: underline;
+}
 
 .main {
     min-height: 600px;
