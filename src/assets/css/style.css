@@ -294,7 +294,7 @@ body {
    Contact Form 
 -------------------------------*/
 .main-contact-form-container {
-    width: 100%;
+    width: 60%;
     padding-top: 80px;
     padding-bottom: 80px;
     
@@ -454,13 +454,15 @@ body {
   }
 
   .main-contact-form div {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 4%;
+    margin-right: 4%;
     
     
 }
-    .main-contact-form-container {
+  .main-contact-form-container {
       padding-top: 20px;
+      width: 100%;
+      border-radius: 0;
     }
 
    
