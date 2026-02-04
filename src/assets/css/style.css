@@ -91,7 +91,7 @@ select {
 
   /* Text */
   --color-text-main: #d5bff9;
-  --color-text-muted: #bfa4ff;
+  --color-text-muted: #7f33a2;
 
   /* Accent */
   --color-accent: #99cc33;
@@ -104,7 +104,7 @@ select {
 
   /* Header / Footer */
   --color-header-bg: #060009;
-  --color-footer-bg: #060009;
+  --color-footer-bg: #100018;
 
   /* Lines / UI */
   --color-border: rgba(113, 28, 135, 0.555);
@@ -147,7 +147,12 @@ textarea:-ms-input-placeholder {
   color: #AFA8D3;
 }
 
-
+a {
+  color: var(--color-accent);
+}
+a:hover {
+  text-decoration: underline;
+}
 
 /* -----------------------------
     Main
@@ -503,8 +508,8 @@ body {
     h1 {
       font-family: 'Anton', sans-serif;
       color: var(--color-text-muted);
+      font-size: 3.5rem; 
     }
-
     .section-inner-container {
       width: 80%;
       margin: 0 auto;
@@ -529,7 +534,7 @@ body {
 
 /* Footer styles */
 .site-footer {
-    background: transparent;
+    background: var(--color-footer-bg);
     color: var(--color-text-muted); /* slightly dimmer than body text */
     text-align: left;
     padding: 40px 20px;
