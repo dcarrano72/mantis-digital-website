@@ -310,7 +310,7 @@ body {
     
 }
 .main-contact-form {
-  background-color: var(--color-bg-main);
+  background-color: var(--color-footer-bg);
   padding-top: 40px;
   padding-bottom: 40px;
 }
