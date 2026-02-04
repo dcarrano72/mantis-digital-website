@@ -341,19 +341,6 @@ body {
 
 }
 
-/* contact form mobile styles */
-@media (min-width: 768px) {
-    .main-contact-form div {
-    margin-left: 2%;
-    margin-right: 2%;
-    border: solid 1px blue;
-    
-}
-    .main-contact-form {
-      border: solid 1px blue;
-    }
-
-}
 
 
 
