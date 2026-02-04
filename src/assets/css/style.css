@@ -90,7 +90,7 @@ select {
   --color-gradient-end: #060009;
 
   /* Text */
-  --color-text-main: #d5bff9;
+  --color-text-main: #e9a5fa;
   --color-text-muted: #7f33a2;
 
   /* Accent */
@@ -303,7 +303,7 @@ body {
     padding-top: 80px;
     padding-bottom: 80px;
     
-    background-color: var(--color-bg-main);
+    background-color: var(--color-footer-bg);
     border-radius: 10px;
     margin: 50px auto;
     text-align: left;
@@ -332,7 +332,7 @@ body {
 }
 
 .main-contact-form label {
-    color: var(--color-text-muted);
+    color: var(--color-text-main);
 }
 
 .contact-form-button {
