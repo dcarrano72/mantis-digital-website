@@ -671,7 +671,7 @@ h4 {
 
 /* Footer styles */
 .site-footer {
-    background: var(--color-footer-bg);
+    background: var(--color-gradient-end);
     color: var(--color-text-muted); /* slightly dimmer than body text */
     text-align: left;
     padding: 40px 20px;
