@@ -283,7 +283,7 @@ body {
   color: var(--color-accent);
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   white-space: nowrap;
   transition: color 0.25s ease;
 }
@@ -409,7 +409,7 @@ body {
 
 /* Default placeholder look */
 .main-contact-form ::placeholder{
-  color: rgba(20,20,25,0.45);
+  color: var(--color-bg-main);
 }
 
 /* Hide placeholder when field is focused */
@@ -598,8 +598,22 @@ section p {
 .section-four-column {
 
 }
-
-
+h1, h2, h3, h4 {
+  font-family: 'Anton', sans-serif;
+  color: var(--color-text-muted);
+}
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1rem;
+}
 
 
 /* Footer styles */
