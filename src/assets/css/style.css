@@ -579,7 +579,7 @@ section {
 }
 
 .section-inner-container {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
 
 }
@@ -606,8 +606,9 @@ section {
 
 .col {
   min-width: 0;
-  border: solid 2px var(--color-accent);
+  
   padding: 20px;
+  background-color: var(--color-footer-bg);
 }
 
 
