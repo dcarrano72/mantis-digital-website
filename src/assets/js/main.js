@@ -35,3 +35,44 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+// GSAP
+// /assets/js/reveal.js
+(() => {
+  // Respect reduced motion
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) return;
+
+  if (!window.gsap || !window.ScrollTrigger) {
+    console.warn("GSAP / ScrollTrigger not found. Check script includes.");
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const items = gsap.utils.toArray(".reveal");
+
+  items.forEach((el) => {
+    // Optional: prevent "flash" before JS runs (best paired with CSS below)
+    // gsap.set(el, { opacity: 0, y: 16 });
+
+    gsap.fromTo(
+      el,
+      { autoAlpha: 0, y: 30 },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.6,
+        ease: "power2.out",
+        overwrite: "auto",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 85%",      // when element hits 85% down the viewport
+          toggleActions: "play none none none",
+          // once: true, // Uncomment if you never want it to re-run (GSAP 3.12+ supports this)
+        },
+      }
+    );
+  });
+})();

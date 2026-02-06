@@ -74,6 +74,22 @@ select {
   outline: none;
 }
 
+/* ----------------------------
+   GSAP POP FIX
+------------------------------*/
+
+/* Optional: avoids a flash of unanimated content */
+/*.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}*/
 
 
 
