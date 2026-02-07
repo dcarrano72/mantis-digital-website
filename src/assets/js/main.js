@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     y: 0,
     duration: 0.5,
     ease: "power2.out",
-    stagger: 0.5,
+    stagger: 0.3,
     overwrite: "auto",
     scrollTrigger: {
       trigger: wrap,
