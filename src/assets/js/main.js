@@ -75,4 +75,25 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     );
   });
+  gsap.utils.toArray(".js-form-reveal").forEach((wrap) => {
+  const fields = wrap.querySelectorAll(".js-form-field");
+  if (!fields.length) return;
+
+  // Hide only the fields (safe: doesn't blank the page)
+  gsap.set(fields, { autoAlpha: 0, y: 14 });
+
+  gsap.to(fields, {
+    autoAlpha: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out",
+    stagger: 0.1,
+    overwrite: "auto",
+    scrollTrigger: {
+      trigger: wrap,
+      start: "top 85%",
+      toggleActions: "play none none none",
+    },
+  });
+});
 })();
