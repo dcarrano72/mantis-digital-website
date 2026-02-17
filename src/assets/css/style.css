@@ -259,11 +259,23 @@ a:hover {
     Main
 -------------------------------*/
 body {
-    background: radial-gradient(circle at center, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
+    /*background: radial-gradient(circle at center, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);*/
     color: var(--color-text-main); /* a soft lavender white that compliments purple */
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 400;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(
+        circle at center,
+        var(--color-gradient-start) 0vh,
+        var(--color-gradient-end) 80vh
+    );
 }
 
 /* -----------------------------
@@ -403,18 +415,19 @@ body {
    Contact Form 
 -------------------------------*/
 .main-contact-form-container {
-    width: 70%;
+    width: 60%;
     padding-top: 80px;
     padding-bottom: 80px;
-    
-    background-color: var(--color-footer-bg);
+    background: rgba(0, 0, 0, 0.4);
+    /*background-color: var(--color-footer-bg);*/
     border-radius: 10px;
     margin: 50px auto;
     text-align: left;
     
 }
 .main-contact-form {
-  background-color: var(--color-footer-bg);
+  /*background: rgba(0, 0, 0, 0.4);*/
+  /*background-color: var(--color-footer-bg);*/
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -611,7 +624,7 @@ section p {
 .hero {
     min-height: 400px;
     width: 100vw;
-    background-color: var(--color-bg-surface);
+    /*background-color: var(--color-bg-surface);*/
 
 }
 section {
