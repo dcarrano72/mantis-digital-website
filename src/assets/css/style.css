@@ -624,7 +624,7 @@ section p {
 .hero {
     min-height: 400px;
     width: 100vw;
-    /*background-color: var(--color-bg-surface);*/
+    background-color: var(--color-footer-bg);
 
 }
 section {
