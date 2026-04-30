@@ -475,7 +475,42 @@ body::before {
   opacity: 0;
 }
 
+/* === FORM CONTAINER MATCHING CARDS === */
 
+.main-contact-form-container {
+  border: 2px solid transparent;
+  transition: border 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-contact-form-container:hover {
+  border: 2px solid #a6ff00;
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(166, 255, 0, 0.3);
+}
+
+.main-contact-form input,
+.main-contact-form select,
+.main-contact-form textarea {
+  border: 1px solid transparent;
+  transition: border 0.25s ease, box-shadow 0.25s ease;
+}
+
+.main-contact-form input:focus,
+.main-contact-form select:focus,
+.main-contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #a6ff00;
+  box-shadow: 0 0 8px rgba(166, 255, 0, 0.4);
+}
+
+.main-contact-form button.cta1 {
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.main-contact-form button.cta1:hover {
+  box-shadow: 0 0 15px rgba(166, 255, 0, 0.4);
+  transform: translateY(-2px);
+}
 
 
 
@@ -646,10 +681,12 @@ section p {
  
 }
 section {
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   padding-top: 60px;
 }
-
+.sub {
+  font-size: 1.1em;
+}
 .section-one-column {
   text-align: center;
 }
@@ -720,7 +757,7 @@ section {
 }
 
 .pricing-title {
-  font-size: 28px;
+  
   margin-bottom: 20px;
 }
 
