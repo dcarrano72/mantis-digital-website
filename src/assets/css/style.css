@@ -733,7 +733,7 @@ section {
 }
 
 .pricing-price {
-  font-family: Impact, sans-serif;
+  font-family: 'Anton', sans-serif;
   color: #fff;
   font-size: 38px;
   line-height: 1;
@@ -834,7 +834,7 @@ section {
   }
 
   .pricing-price {
-  font-family: Impact, sans-serif;
+  font-family: 'Anton', sans-serif;
   }
 
 }
