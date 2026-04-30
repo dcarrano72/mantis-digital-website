@@ -833,6 +833,10 @@ section {
     width: 100%;
   }
 
+  .pricing-price {
+  font-family: Impact, sans-serif;
+  }
+
 }
 
 
