@@ -876,6 +876,161 @@ section {
 
 }
 
+/****************************************
+  Prices and Services section
+******************************************/
+
+.pricing-services-page {
+  padding: 40px 20px 70px;
+}
+
+.pricing-wrap-one-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 25px;
+}
+
+.pricing-wrap-one-column .pricing-box {
+  width: 100%;
+}
+
+.pricing-offer-card {
+  padding: 42px;
+  overflow: hidden;
+}
+
+.pricing-offer-top {
+  display: grid;
+  grid-template-columns: 1.45fr 0.85fr;
+  gap: 44px;
+  align-items: center;
+  padding-bottom: 34px;
+  margin-bottom: 34px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.pricing-eyebrow {
+  color: #a6ff00;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.pricing-plan-title-large {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.05;
+  margin: 0 0 18px;
+}
+
+.pricing-description {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 640px;
+}
+
+.pricing-price-block {
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+  padding-left: 36px;
+}
+
+.pricing-price-block .pricing-price {
+  font-size: clamp(58px, 8vw, 86px);
+  margin: 0 0 16px;
+}
+
+.pricing-badge {
+  display: inline-block;
+  color: #a6ff00;
+  border: 2px solid #a6ff00;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 16px;
+}
+
+.pricing-price-note {
+  color: #d8d8d8;
+  font-size: 16px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.pricing-list-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 54px;
+}
+
+.pricing-feature-list li {
+  margin: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.pricing-cta-wrap {
+  text-align: center;
+  margin-top: 34px;
+}
+
+.pricing-button {
+  display: inline-block;
+  background: #a6ff00;
+  color: #000;
+  text-decoration: none;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 14px 42px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(166, 255, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 28px rgba(166, 255, 0, 0.55);
+}
+
+@media (max-width: 800px) {
+  .pricing-offer-card {
+    padding: 28px;
+  }
+
+  .pricing-offer-top {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .pricing-price-block {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    padding-left: 0;
+    padding-top: 28px;
+  }
+
+  .pricing-list-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-description {
+    font-size: 18px;
+  }
+
+  .pricing-button {
+    width: 100%;
+  }
+}
+
+/* end prices and services */
 
 h1, h2, h3, h4 {
   font-family: 'Anton', sans-serif;
