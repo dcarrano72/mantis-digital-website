@@ -1032,6 +1032,90 @@ section {
 
 /* end prices and services */
 
+/* Starter Website Promo */
+
+.starter-promo {
+  padding: 25px 20px 10px;
+}
+
+.starter-promo-box {
+  background: #000;
+  border-radius: 15px;
+  padding: 28px 32px;
+  border: 2px solid transparent;
+  text-align: center;
+  transition: border 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.starter-promo-box:hover {
+  border: 2px solid #a6ff00;
+  box-shadow: 0 0 18px rgba(166, 255, 0, 0.25);
+  transform: translateY(-3px);
+}
+
+.starter-promo-eyebrow {
+  color: #a6ff00;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.starter-promo-box h3 {
+  color: #fff;
+  font-size: clamp(24px, 4vw, 34px);
+  margin: 0 0 8px;
+}
+
+.starter-promo-main {
+  color: #d8d8d8;
+  font-size: 17px;
+  margin: 0 0 20px;
+}
+
+.starter-promo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 760px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 28px;
+  text-align: left;
+}
+
+.starter-promo-list li {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-main);
+  font-size: 15px;
+}
+
+.starter-promo-list li::before {
+  content: "";
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  background-image: url("/assets/images/checkmark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (max-width: 700px) {
+  .starter-promo-box {
+    padding: 24px 22px;
+  }
+
+  .starter-promo-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
 h1, h2, h3, h4 {
   font-family: 'Anton', sans-serif;
   color: var(--color-text-muted);
