@@ -96,4 +96,40 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 });
+
+// Hero rotating text
+const heroRotator = document.getElementById("hero-rotator");
+
+if (heroRotator && window.gsap) {
+  const heroLines = [
+    "Fast websites that get more calls",
+    "Get found on Google & AI search",
+    "Professional websites without agency overhead",
+    "Built for contractors & small businesses",
+    "Modern websites that help your business grow"
+  ];
+
+  let currentLine = 0;
+
+  gsap.set(heroRotator, { opacity: 1 });
+
+  setInterval(() => {
+    gsap.to(heroRotator, {
+      opacity: 0,
+      duration: 0.5,
+      ease: "power2.out",
+      onComplete: () => {
+        currentLine = (currentLine + 1) % heroLines.length;
+        heroRotator.textContent = heroLines[currentLine];
+
+        gsap.to(heroRotator, {
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+      }
+    });
+  }, 4500);
+}
+
 })();
