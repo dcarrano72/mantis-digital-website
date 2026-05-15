@@ -562,6 +562,11 @@ body::before {
     display: none;
     font-family: 'Anton', sans-serif;
   }
+  .phone-icon {
+  display: inline-block;
+  margin-right: 8px;
+  color: green;
+}
 
   /* Row 2 right: hamburger */
   .nav-toggle {
@@ -1049,6 +1054,14 @@ section {
   border: 2px solid transparent;
   text-align: center;
   transition: border 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+.starter-promo-box {
+  grid-column: 1 / -1;
+}
+
+.starter-promo-inner {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .starter-promo-box:hover {
