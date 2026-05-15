@@ -1036,9 +1036,13 @@ section {
 
 .starter-promo {
   padding: 25px 20px 10px;
+  text-align: center;
 }
 
 .starter-promo-box {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
   background: #000;
   border-radius: 15px;
   padding: 28px 32px;
@@ -1105,15 +1109,20 @@ section {
 }
 
 @media (max-width: 700px) {
+  .starter-promo {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .starter-promo-box {
-    padding: 24px 22px;
+    width: 100%;
+    padding: 24px 25px;
   }
 
   .starter-promo-list {
     grid-template-columns: 1fr;
   }
 }
-
 
 
 h1, h2, h3, h4 {
