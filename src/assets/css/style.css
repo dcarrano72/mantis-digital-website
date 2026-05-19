@@ -640,10 +640,7 @@ body::before {
       border-radius: 0;
     }
 
-   .hero {
-    min-height: 1050px;
-    
-   }
+   
 }
 
 
@@ -885,6 +882,11 @@ section {
   .pricing-price {
   font-family: 'Anton', sans-serif;
   }
+
+  .hero {
+    min-height: 1050px;
+    background-position: bottom center;
+   }
 
 }
 
