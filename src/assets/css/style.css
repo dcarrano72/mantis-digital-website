@@ -640,7 +640,10 @@ body::before {
       border-radius: 0;
     }
 
-   
+   .hero {
+    min-height: 1050px;
+    
+   }
 }
 
 
