@@ -102,12 +102,14 @@ const heroRotator = document.getElementById("hero-rotator");
 
 if (heroRotator && window.gsap) {
   const heroLines = [
-    "Fast websites that get more calls",
-    "Get found on Google & AI search",
-    "Professional websites without agency overhead",
-    "Built for contractors & small businesses",
-    "Modern websites that help your business grow"
-  ];
+  "Clean, creative websites for businesses, brands, and artists",
+  "From simple starter websites...",
+  "to fully custom creative experiences",
+  "Professional websites that make your business stand out",
+  "Custom artwork, characters, animation, and creative design",
+  "Modern websites for businesses, brands, and artists",
+  "Built with clean design, creativity, and modern development"
+];
 
   let currentLine = 0;
 
