@@ -710,6 +710,8 @@ section p {
     right: 20%;
     
   }
+
+  
 }
 
 .hero-content {
@@ -946,7 +948,7 @@ section {
   }
 
   .hero {
-    min-height: 1050px;
+    min-height: 1250px;
     background-position: bottom center;
    }
 
