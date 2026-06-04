@@ -37,6 +37,40 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// hero video 
+document.addEventListener('DOMContentLoaded', () => {
+
+    const video = document.querySelector('.hero-video');
+    const button = document.querySelector('.video-sound-button');
+
+    button.textContent = 'Play Video';
+
+    button.addEventListener('click', () => {
+
+        if (video.paused) {
+
+            video.play();
+            button.textContent = 'Stop Video';
+
+        } else {
+
+            video.pause();
+            video.load(); // restores poster image
+            button.textContent = 'Play Video';
+
+        }
+
+    });
+
+    video.addEventListener('ended', () => {
+
+        video.load(); // restores poster image
+        button.textContent = 'Play Video';
+
+    });
+
+});
+
 // GSAP
 // /assets/js/reveal.js
 (() => {
