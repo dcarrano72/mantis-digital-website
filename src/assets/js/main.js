@@ -37,35 +37,80 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// hero video 
+// hero video
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const video = document.querySelector('.hero-video');
-    const button = document.querySelector('.video-sound-button');
 
-    button.textContent = 'Play Video';
+    if (!video) return;
 
-    button.addEventListener('click', () => {
+    function playVideo() {
 
-        if (video.paused) {
+        video.currentTime = 0;
 
-            video.play();
-            button.textContent = 'Stop Video';
+        video.play().catch(err => {
 
-        } else {
+            console.log(err);
 
-            video.pause();
-            video.load(); // restores poster image
-            button.textContent = 'Play Video';
+        });
 
-        }
+    }
 
-    });
+    function stopVideo() {
+
+        video.pause();
+
+        video.currentTime = 0;
+
+        video.load(); // restores poster image
+
+    }
+
+    // Detect whether the device supports hover
+    const supportsHover = window.matchMedia('(hover: hover)').matches;
+
+    if (supportsHover) {
+
+        // DESKTOP
+
+        video.addEventListener('mouseenter', () => {
+
+            playVideo();
+
+        });
+
+        video.addEventListener('mouseleave', () => {
+
+            stopVideo();
+
+        });
+
+    } else {
+
+        // MOBILE
+
+        video.addEventListener('click', () => {
+
+            if (video.paused) {
+
+                playVideo();
+
+            } else {
+
+                stopVideo();
+
+            }
+
+        });
+
+    }
+
+    // Restore poster when video ends
 
     video.addEventListener('ended', () => {
 
-        video.load(); // restores poster image
-        button.textContent = 'Play Video';
+        stopVideo();
 
     });
 
