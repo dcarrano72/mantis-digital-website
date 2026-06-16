@@ -695,7 +695,7 @@ section p {
   width: 250px;
   height: auto;
   object-fit: cover;
-  
+  cursor: pointer;
   bottom: 0;
   right: 40px;
   z-index: 0;
@@ -704,6 +704,7 @@ section p {
 .over-video {
   position: relative;
   z-index: 4;
+  pointer-events: none;
 }
 
 @media (max-width: 800px) {

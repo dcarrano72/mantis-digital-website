@@ -67,46 +67,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    // Detect whether the device supports hover
-    const supportsHover = window.matchMedia('(hover: hover)').matches;
+    // Click or tap toggles play/stop
 
-    if (supportsHover) {
+    video.addEventListener('click', () => {
 
-        // DESKTOP
-
-        video.addEventListener('mouseenter', () => {
+        if (video.paused) {
 
             playVideo();
 
-        });
-
-        video.addEventListener('mouseleave', () => {
+        } else {
 
             stopVideo();
 
-        });
+        }
 
-    } else {
+    });
 
-        // MOBILE
-
-        video.addEventListener('click', () => {
-
-            if (video.paused) {
-
-                playVideo();
-
-            } else {
-
-                stopVideo();
-
-            }
-
-        });
-
-    }
-
-    // Restore poster when video ends
+    // Restore poster when finished
 
     video.addEventListener('ended', () => {
 
