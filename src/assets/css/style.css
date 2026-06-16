@@ -702,6 +702,7 @@ section p {
 }
 
 .over-video {
+  position: relative;
   z-index: 4;
 }
 
