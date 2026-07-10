@@ -1316,3 +1316,19 @@ h4 {
     gap: 30px;
   }
 }
+
+
+/* .blue-flames {
+  position: fixed !important;
+  left: 0 !important;
+  bottom: 0 !important;
+
+  width: 100vw !important;
+  height: 600px !important;
+
+  object-fit: fill !important;
+
+  pointer-events: none !important;
+  z-index: 9999 !important;
+  
+} */
