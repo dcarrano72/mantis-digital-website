@@ -158,13 +158,13 @@ const heroRotator = document.getElementById("hero-rotator");
 
 if (heroRotator && window.gsap) {
   const heroLines = [
-  "Clean, creative websites for businesses, brands, and artists",
-  "From simple starter websites...",
-  "to fully custom creative experiences",
-  "Professional websites that make your business stand out",
-  "Custom artwork, characters, animation, and creative design",
-  "Modern websites for businesses, brands, and artists",
-  "Built with clean design, creativity, and modern development"
+  "Professional websites built by Dave",
+  "Website design, SEO & creative services",
+  "Need a new website? Let's talk.",
+  "Website repairs and improvements",
+  "Helping small businesses grow online",
+  "Custom graphics and creative design",
+  "Friendly, personal website service"
 ];
 
   let currentLine = 0;
