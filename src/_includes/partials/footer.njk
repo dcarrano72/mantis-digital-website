@@ -1,5 +1,6 @@
 
     
+{% if not homepageRedesign %}
 <div class="back-to-top-container">
     <a href="#top" class="back-to-top">
         <img src="/assets/images/arrow-up-green.svg" alt="" class="back-to-top__icon">
@@ -7,6 +8,51 @@
     </a>
 </div>
 
+{% endif %}
+{% if homepageRedesign %}
+<footer class="md-footer">
+  <a class="md-footer-top" href="#top">
+    <svg width="100" height="20" viewBox="0 0 100 20" aria-hidden="true" focusable="false"><path d="M50 0 L100 20 L0 20 Z" /></svg>
+    <span>BACK TO TOP</span>
+  </a>
+  <div class="md-container md-footer-grid">
+<div>
+<a href="/" class="md-footer-logo">
+<img src="/assets/images/logo2.svg" alt="Mantis Digital Media" width="240" height="62" loading="lazy">
+</a>
+<p>Web development, interactive experiences,<br>and creative digital services.</p>
+</div>
+<nav aria-label="Footer navigation">
+<h2>Explore</h2>
+<ul>
+<li>
+<a href="#website-help">What We Create</a>
+</li>
+<li>
+<a href="#creative-work">Creative &amp; Interactive</a>
+</li>
+<li>
+<a href="#contractor-work">Contractor Websites</a>
+</li>
+<li>
+<a href="/prices-and-services/">Prices &amp; Services</a>
+</li>
+</ul>
+</nav>
+<div>
+<h2>Get in Touch</h2>
+<p>
+<a href="tel:2034029550">203-402-9550</a>
+<br>Shelton, Connecticut<br>
+<a href="mailto:dave@mantisdigitalmedia.com">dave@mantisdigitalmedia.com</a>
+</p>
+<a href="#contact">Let's Build Something →</a>
+</div>
+</div>
+<p class="md-footer-bottom">&copy; <span id="year">
+</span> Mantis Digital Media LLC. All rights reserved.</p>
+</footer>
+{% else %}
 <footer class="site-footer">
 
         <div class="footer-container">
@@ -39,6 +85,7 @@
             <p>&copy; <span id="year"></span> Mantis Digital Media LLC. All rights reserved.</p>
         </div>
     </footer>
+{% endif %}
 
     <!-- Sticky Mobile Call Button -->
     <a href="tel:2034029550" class="mobile-call-button">

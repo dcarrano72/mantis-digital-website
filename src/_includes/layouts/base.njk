@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}{% if title %} | Mantis Digital Media{% endif %}</title>
+    <title>{{ title }}{% if title and not titleIncludesBrand %} | Mantis Digital Media{% endif %}</title>
     <meta name="description" content="{{ description | default('Clean, creative websites for small businesses in Connecticut.') }}">
     <meta name="google-site-verification" content="7qeDjLIaEB2Km3iLBbu3nD-aKgUYpkxIjdNuu4NbaKE" />
 
 
     <link rel="stylesheet" href="/assets/css/style.css">
+    {% if homepageRedesign %}<link rel="stylesheet" href="/assets/css/homepage.css">{% endif %}
+    {% if creativePage %}<link rel="stylesheet" href="/assets/css/creative-interactive.css">{% endif %}
+    {% if contractorPage %}<link rel="stylesheet" href="/assets/css/contractor-solutions.css">{% endif %}
+    {% if canonicalUrl %}<link rel="canonical" href="{{ canonicalUrl }}">{% endif %}
     <!-- 
         Favicon:
         This project uses a placeholder icon (favicon-placeholder.png).
@@ -35,9 +39,12 @@
 
 
 </head>
-<body>
+<body{% if homepageRedesign %} class="md-homepage"{% elif creativePage %} class="creative-body"{% endif %}>
     <div id="top"></div>
     {% include "partials/header.njk" %}
+    {% if homepageRedesign or creativePage or contractorPage %}
+    {% include "partials/service-banner.njk" %}
+    {% endif %}
 
 
     
